@@ -8,7 +8,7 @@ sub printUsage {
 }
 
 sub parse {
-  open(my $in, "sources.list") || die("Couldn't open '/etc/apt/sources.list': $!");
+  open(my $in, "/etc/apt/sources.list") || die("Couldn't open '/etc/apt/sources.list': $!");
 
   while(<$in>) {
     my $pushList = 1; # sets to push the current element to the list to be printed regardless
